@@ -1,0 +1,17 @@
+<footer class="footer">
+  {% for item in site.data.settings.social %}
+    {% if item.icon %}
+    <a href="{{ item.link }}" target="_blank"><i class="fab fa-{{ item.icon }}" aria-hidden="true"></i></a>
+    {% endif %}
+  {% endfor %}
+  
+  {% if site.email %}
+  <a href="mailto:{{ site.email }}"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  {% endif %}
+  
+  <a href=" {{ site.baseurl }}/feed.xml "><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+</footer>
+
+<div class="theme">
+  <span>&copy; {{ site.time | date: '%Y' }} Daotin . Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>, theme <a href="http://github.com/professordeng/simple/" target="_blank">Simple</a></span>
+</div>

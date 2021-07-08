@@ -1,0 +1,26 @@
+.archives {
+  list-style: none;
+  padding-left: 0;
+  border: 2px solid #dfe2e5;
+}
+
+.archives-title {
+  text-align: center;
+  border-radius: 1rem;
+  background-color: var(--gray-300);
+}
+
+.archive-item {
+  padding: .25rem .5rem;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.archive-date {
+  float: left;
+  width: 4rem;
+  
+  @media (min-width: 38rem) {
+    float: right;
+    width: auto;
+  }
+}

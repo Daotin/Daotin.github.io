@@ -1,0 +1,52 @@
+title: 前端队长                        # title of the site
+description: Web Frontend JavaScript          # description of the site
+author: Daotin
+url:      # domain
+baseurl: "/"                   # 网站根路径
+
+# Email address
+email: daotin@qq.com
+
+# Path of site resources
+img: /assets/img
+css: /assets/css
+js:  /assets/js
+
+## Docs: https://pages.github.com/versions/
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
+  - jekyll-paginate
+
+# paginate setting
+paginate: 8
+
+# Comment system
+## Docs: https://github.com/gitalk/gitalk/blob/master/readme.md
+gitalk:
+  enable: true 
+  clientID: 62b3a61a4b0061f1e068
+  clientSecret: dea2373cdf4a4afdeb942bd022d4b40abd187cbb
+  repo: daotin.github.io
+  owner: Daotin
+  admin: Daotin
+  id: location.pathname
+#   title: simple   # Issue title
+#   body: simple
+  
+
+# Google Analytics
+## Docs: https://analytics.google.com/analytics/web/
+google-analytics: G-GKS88BC7VM
+
+# default layout of the articles in _post
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

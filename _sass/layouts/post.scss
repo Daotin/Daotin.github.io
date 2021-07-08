@@ -1,0 +1,106 @@
+.post {
+  padding: 0 1rem;
+  background-color: var(--container-bg);
+  padding-bottom: 1rem;
+  
+  @media (min-width: 38rem) {
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+  }
+}
+
+.post-title {
+  padding-top: 1rem;
+}
+
+.post-meta {
+  display: block;
+  font-size: .75rem;
+  color: var(--gray-600);
+  border-bottom: 1px solid var(--gray-400);
+  margin-bottom: 1rem;
+}
+
+// 目录布局
+
+#markdown-toc {
+  display: none;
+  font-size: 16px;
+  list-style: none;
+  position: fixed;
+  padding-left: 0;
+ 
+  top: 5rem;
+  right: 0;
+   
+  width: calc(50vw - 19.5rem);      // All free parts on the lefts
+  max-height: calc(100vh - 9rem);   // Remove navigation bar and footer
+  @media (min-width: 60rem) {
+    display: inline-block;
+  }
+  
+  &::before {
+    content: "TOC";
+    padding-left: .5rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  & ol {
+    padding-left: 0;
+    margin-bottom: 0;
+  } 
+  
+  & li {
+    max-width: 5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    margin: 0 .5rem;
+    padding-left: 0;
+  }
+}
+
+// toc highlight
+.tocactive {
+  font-weight: bold;
+  color: black;
+}
+
+.prev-next {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  
+  & a {
+    display: block;
+    color: var(--gray-600);
+    padding: .25rem .5rem;
+    text-decoration: none;
+    background-color: white;
+    
+    &:hover {
+      color: #dfe2e5;
+      background-color: #333;
+    }
+    
+    @media (min-width: 38rem) {
+      border-radius: var(--border-radius);
+      box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+    }
+  }
+}
+
+#gitalk-container {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  background-color: white;
+  
+  @media (min-width: 38rem) {
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+  }
+}

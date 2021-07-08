@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="post">
+  {% if page.img %}
+    <img src="{{ site.img }}/{{ page.img }}" class = "bigimg" />
+  {% endif %}
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-meta">{{ site.author }} · {{ page.date | date: '%Y-%m-%d' }} · {{ page.content | strip_html | strip_newlines | remove: " " | size }} words · 
+  <a href="https://github.com/daotin/daotin.github.io/edit/main/{{ page.path }}">{{ site.data.settings.edit }}</a>
+  </span>
+  
+  {{ content }}
+  
+</div>
+
+<div class="prev-next">
+  <div class="prev">
+  {% if page.previous %}
+    <a href="{{ page.previous.url | relative_url }}">{{ site.data.settings.prev }}</a>
+  {% endif %}
+  </div>
+  
+  <div class="next">
+  {% if page.next %}
+    <a href="{{ page.next.url | relative_url }}">{{ site.data.settings.next }}</a>
+  {% endif %}
+  </div>
+</div>
+
+{% if site.gitalk.enable %}
+  {% include comment.html %}
+{% endif %}

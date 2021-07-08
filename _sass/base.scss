@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+  -webkit-tap-highlight-color: rgba(0,0,0,0);   // The blue box is not displayed on the phone
+}
+
+// root element settings
+html {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+// content settings
+body {
+  color: var(--gray-700);
+  background-color: var(--body-bg);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  
+  &:hover,
+  &:focus {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  border: .3em solid #e0dfcc;
+}
+
+// Click on the picture to enlarge through this class
+.bigimg {
+  max-width: calc(100% + 2rem);
+  margin-left: -1rem;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+// table header cells and standard cells 
+th, td {    
+  border: 1px solid #dfe2e5;
+  padding: .25rem .5rem;
+  text-align: center;
+}
+
+// table row
+tr:hover {
+  background-color: #dfe2e5;
+}
