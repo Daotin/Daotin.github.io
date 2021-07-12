@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+           width: 500px;
+           position: relative;
+           font-size: 14px;
+           line-height: 16px;
+        }
+        .container div {
+           visibility: hidden;
+           /** 避免初始化时容器没有高度 */
+           padding: 8px 0px;
+        }
+        .container textarea {
+           width: 100%;
+           height: 100%;
+           position: absolute;
+           top: 0px;
+           padding: 0px;
+           /** 必须设置为 content-box !!! */
+           box-sizing: content-box;
+           /** 设置字体尺寸与行高继承自父元素 */
+           font-size: inherit;
+           line-height: inherit;
+           /* 去掉右下角的调整大小的标志 */
+           resize: none;
+        }
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <textarea placeholder="输入消息..."></textarea> 
+     </div>
+</body>
+<script>
+    const textarea = document.querySelector('.container textarea');
+    const div = document.querySelector('.container div');
+    textarea.addEventListener('input', (e) => {
+       div.innerText = e.target.value;
+    });
+ </script>
+</html>
+
